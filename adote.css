@@ -3,9 +3,10 @@ body {
     background-color: #ffe4c6;
     
 }
-.container-menu{    
+.container-menu, .container{    
     height: 80px;     
-    display: flex;    
+    display: flex;  
+    align-items: center;  
     justify-content: space-around;    
     background-color: #ffe4c6;
 
@@ -19,13 +20,19 @@ body {
     border-radius: 15px;
 }
 
-.logo:hover {
-
+.pets {
+    display: flex;
+    align-items: center;
+    background-color: #d38b3a ;
     height: 80px;
+    font-weight: bolder;
+    font-size: xx-large;    
+    padding-left: 35%;
 }
 
-.menu{
-    width: 100%;
+
+
+.menu {   
     width: 990px;      
     display: flex;
     flex-wrap: wrap;    
@@ -34,28 +41,42 @@ body {
     font-size: 25px;  
     font-weight: 900; 
 }
-.imagem {    
-    width: 100%;
+
+main, .imagem {    
     display: flex; 
     flex-wrap: wrap;
-    justify-content: space-evenly;  
-    margin: 40px 0 0 0;  
-    cursor: pointer;  
-       
+    justify-content: space-around;  
+    margin: 40px 0 0 0; 
+    cursor: pointer;   
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;  
+    
 }
 
-.fotos:hover {
-    max-width: 215px;
-}
 
-.fotos img {   
-
-    border: 2px solid black; 
+.imagem img {
+    width: 200px; 
+    height: 200px;     
+    overflow: hidden;             
+    border: 2px solid #e6b67f; 
     border-radius: 15px;  
-    box-shadow: 10px 10px 10px #e5c299;
+    box-shadow: 10px 10px 10px #e6b67f;
     transition: 0.6s;      
 }
 
+
+
+.logo:hover {
+
+    height: 80px;
+}
+
+.fotos:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.5);
+ }
 
 
 
@@ -72,13 +93,13 @@ body {
   
 
 
-ul a:hover{
+a:hover{
     text-decoration:none;
     color: rgb(95, 95, 235);
     font-size: x-large;
 }
 
-ul a:active{
+a:active{
     text-decoration:none;
     color:purple;
 } 
@@ -92,7 +113,7 @@ a {
 @media (max-width: 700px) {
 
 
-    .container-menu, .menu {
+    .container-menu, .container , .menu {
         height: max-content;
         flex-direction: column;
         align-items: center;
